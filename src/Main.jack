@@ -1,0 +1,50 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/09/HelloWorld/Main.jack
+
+/** Menu & choice program. */
+class Main {
+   function void main() {
+      var int choice;
+      var char command;
+      var Random random;
+      /* Prints some text using the standard library. */
+      do Output.printString("Enter the option you would like: ");
+      do Output.println();
+      do Output.printString("----------------------------------");
+      do Output.println();
+      do Output.printString("a. Print a message of encouragement.");
+      do Output.println();
+      do Output.printString("b. Take the L.");
+      do Output.println();
+      do Output.printString("c. Bye!");
+      do Output.println();
+      let command = Keyboard.readChar();
+      do Output.println();
+      if (command = 65){
+         let choice = 1;
+        // do Output.printInt(choice);
+         if(choice = 1){
+            do Output.printString("You are on a journey of greatness!");
+         }
+         if(choice = 2){
+            do Output.printString("Nobody matches your drive!");
+         }
+         if(choice = 3){
+            do Output.printString("Frustration is temporary, keep pushing!");
+         }
+      }
+      if(command = 66){
+         do Screen.drawLine(170,0,170,255);
+         do Screen.drawLine(170,255,220,255);
+      }
+      if(command = 67){
+         do Output.printString("Bye!");
+      }
+      //do Output.printString("Hello world!");
+     // do Output.println();      // New line
+      
+      return;
+   }
+}
